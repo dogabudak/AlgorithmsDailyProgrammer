@@ -22,7 +22,7 @@ var maxDigit = 0;
 var iterations = 0;
 
 function divider(aNumber) {
-ws    if (aNumber === 6174) {
+    if (aNumber === 6174) {
         console.log(iterations)
         process.exit(0)
     }
@@ -51,6 +51,9 @@ ws    if (aNumber === 6174) {
 function findRoutine(digitsArr) {
     if (digitsArr.length < 4) {
         digitsArr.unshift(0)
+    }else if (digitsArr.length > 4){
+        console.log("wrong type of number (Need 4 digit number)")
+        process.exit(1)
     }
     var Descending = kaprekarRoutine(digitsArr)
     var Ascending = kaprekarRoutine(digitsArr.reverse());
